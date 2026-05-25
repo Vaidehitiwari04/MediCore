@@ -1,0 +1,12 @@
+# frontend
+hospital-frontend/node_modules
+hospital-frontend/build
+
+# backend
+hospital/target
+
+# common
+.idea
+.vscode
+*.log
+.DS_Store
