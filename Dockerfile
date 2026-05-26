@@ -1,12 +1,9 @@
 # Stage 1 - Build
 FROM maven:3.9.6-eclipse-temurin-17 AS build
 WORKDIR /app
-
-COPY hospital/pom.xml .
+COPY hospital/hospital/pom.xml .
 RUN mvn dependency:go-offline -B
-
-COPY hospital/src ./src
-
+COPY hospital/hospital/src ./src
 RUN mvn package -DskipTests
 
 # Stage 2 - Run
